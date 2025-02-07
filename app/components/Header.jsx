@@ -1,5 +1,7 @@
 "use client";
 import { FaInstagram, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -8,23 +10,24 @@ export default function Header() {
         aria-label="Global"
         className="container mx-auto flex items-center justify-between px-4 py-4 lg:px-8"
       >
-        {/* Desktop Logo Text (ChiroCare) */}
-        <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2">
-          <a href="/" className="text-2xl font-bold text-green-700">
-            ChiroCare
-          </a>
-        </div>
+        {/* Logo Text for Desktop */}
+        <Link
+          href="/"
+          className="hidden lg:block text-2xl font-bold text-green-700 absolute left-1/2 transform -translate-x-1/2"
+        >
+          ChiroCare
+        </Link>
 
-        {/* Mobile Logo Image */}
-        <div className="lg:hidden absolute left-1/2 transform -translate-x-1/2">
-          <a href="/" className="-m-1.5 p-1.5">
-            <img
-              alt="Chiropractic Kadıköy"
-              src="/images/logo.png"
-              className="h-11 w-auto"
-            />
-          </a>
-        </div>
+        {/* Logo Image for Mobile */}
+        <Link href="/" className="-m-1.5 p-1.5 lg:hidden">
+          <Image
+            alt="Chiropractic Kadıköy"
+            src="/images/logo.png"
+            className="h-11 w-auto"
+            width={44}
+            height={44}
+          />
+        </Link>
 
         {/* Desktop Icons - All on the Right */}
         <div className="hidden lg:flex items-center space-x-6 ml-auto">
