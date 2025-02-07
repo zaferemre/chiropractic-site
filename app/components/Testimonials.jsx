@@ -1,116 +1,58 @@
 "use client";
-
 import React, { useRef, useEffect } from "react";
 
-const Testimonials = () => {
-  const testimonials = [
-    {
-      text: "“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”",
-      name: "Judith Black",
-      role: "CEO of Workcation",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“This is the best service I have ever experienced. Highly recommended to everyone looking for quality and professionalism!”",
-      name: "John Doe",
-      role: "Manager at Example Co.",
-      image:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“The team was incredibly supportive and made the entire process seamless. Would definitely return for future needs!”",
-      name: "Alice Smith",
-      role: "Entrepreneur",
-      image:
-        "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“Fantastic service and very professional team. My go-to for anything I need!”",
-      name: "Emma Johnson",
-      role: "Freelancer",
-      image:
-        "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“Amazing experience! They truly care about their customers.”",
-      name: "Oliver Brown",
-      role: "Software Engineer",
-      image:
-        "https://images.unsplash.com/photo-1546525848-3ce03ca516f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“I couldn't be happier with the results. Highly recommended!”",
-      name: "Sophia Wilson",
-      role: "Graphic Designer",
-      image:
-        "https://images.unsplash.com/photo-1551069613-1904dbdcda11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“Incredible customer service and attention to detail. Very satisfied!”",
-      name: "Liam Taylor",
-      role: "Architect",
-      image:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“The best decision I’ve made this year. Thank you so much!”",
-      name: "Mia Martinez",
-      role: "Small Business Owner",
-      image:
-        "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“Affordable, efficient, and high-quality service. Can't ask for more!”",
-      name: "Noah Davis",
-      role: "Marketer",
-      image:
-        "https://images.unsplash.com/photo-1572635148818-ef6fd45eb394?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“They exceeded my expectations in every way possible.”",
-      name: "Amelia Clark",
-      role: "Photographer",
-      image:
-        "https://images.unsplash.com/photo-1546525848-3ce03ca516f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“An unforgettable experience. I’ll be back for sure!”",
-      name: "Elijah Walker",
-      role: "Chef",
-      image:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“Their dedication to quality is evident in every interaction.”",
-      name: "Isabella Perez",
-      role: "Fitness Trainer",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“Friendly staff and great results. A wonderful experience!”",
-      name: "James White",
-      role: "Consultant",
-      image:
-        "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“Top-notch service! I'm beyond impressed.”",
-      name: "Emily Harris",
-      role: "Editor",
-      image:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-    {
-      text: "“They turned my vision into reality. Highly grateful!”",
-      name: "Benjamin Lewis",
-      role: "Interior Designer",
-      image:
-        "https://images.unsplash.com/photo-1572635148818-ef6fd45eb394?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-  ];
+const testimonials = [
+  {
+    text: "Geçirdiğim Polimiyozit ve Dermatomiyozit rahatsızlıklarından sonra kaslarım neredeyse tamamen işlevini yitirmişti. Burak Bey’in tedavisi sayesinde kısa sürede vücudum normal haline döndü. Kendisine teşekkür ederim.",
+    name: "Ayfer Alsan",
+  },
+  {
+    text: "Bir süredir tenisçi dirseğine doğru giden kolum Ahmet hocamın fizyoterapisi sayesinde tekrardan ağrısız ve fonksiyonel hale geldi. İşini iyi bilen, rahat ve nazik biri.",
+    name: "Elif Tufan",
+  },
+  {
+    text: "1,5 yıl önce beynime pıhtı atmıştı, sağ tarafıma inme nedeniyle hastanede Fizik Tedavimi Burak üstlenmişti. Şefkatli yaklaşımıyla iyi bir yol aldım, Burak hocama çok şey borçluyum.",
+    name: "Nihayet Sivri",
+  },
+  {
+    text: "Annemin geçirmiş olduğu seri rahatsızlıklarda yardımları sayesinde yeniden yürüyebildi. Kendisine teşekkür ediyorum, emekleri sayesinde ayaktayız.",
+    name: "Ali Diren",
+  },
+  {
+    text: "Omuz ve sırt ağrımla gitmiştim ve birkaç dakika içerisinde omzumun tutulmasını çözmüştü. Kendisi çok başarılıdır 👏🏻",
+    name: "Elif Tokatlıoğlu",
+  },
+  {
+    text: "Bilgisi ve davranışları mesleğine olan saygısını öyle gösteriyor ki eminim kısa sürede kendini kanıtlayacak. Teşekkürler!",
+    name: "Berran Karahan",
+  },
+  {
+    text: "Burak Bey’den aldığım tedavi desteğinden büyük faydalar gördüm. Kendisine çok teşekkür ediyorum.",
+    name: "Süslügezginkeçi",
+  },
+  {
+    text: "Halısahada bilek bağlarımı zedelemiştim. Ahmet hocam eskisinden iyi hale getirdi 🙏🏻",
+    name: "Metehan Aydın",
+  },
+  {
+    text: "İyi ki yollarımız kesişmiş; emeğiniz ve profesyonelliğiniz için ne kadar teşekkür etsem az!",
+    name: "Begonya Saksısı",
+  },
+  {
+    text: "Gerçekten işinde uzman, son derece bilgili ve güleryüzlü bir uzman. Tavsiye ederim.",
+    name: "Alev Altuğ",
+  },
+  {
+    text: "Burak Bey sayesinde ağrılarım azaldı, kesinlikle tavsiye ediyorum.",
+    name: "Fidan Özen",
+  },
+  {
+    text: "Sayesinde ağrılarım azaldı, hareket kabiliyetim arttı ve yaşam kalitem düzeldi 🙏",
+    name: "Goksin Bicioglu",
+  },
+];
 
+const Testimonials = () => {
   const carouselRef = useRef(null);
 
   useEffect(() => {
@@ -134,7 +76,10 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="relative isolate overflow-hidden lg:px-4">
+    <section className="relative isolate overflow-hidden lg:px-4 py-10">
+      <h2 className="text-center text-3xl font-bold text-gray-900 mb-8">
+        Hasta Yorumları
+      </h2>
       <div
         ref={carouselRef}
         className="mt-10 flex overflow-x-auto space-x-6 pb-4 hide-scrollbar"
@@ -152,19 +97,11 @@ const Testimonials = () => {
           >
             {/* Text Centered in Y-Axis */}
             <blockquote className="text-lg font-semibold text-gray-900 flex-grow flex items-center justify-center">
-              <p>{testimonial.text}</p>
+              <p>“{testimonial.text}”</p>
             </blockquote>
-            {/* Image, Name, and Role at the Bottom */}
-            <figcaption className="mt-6">
-              <img
-                alt={testimonial.name}
-                src={testimonial.image}
-                className="mx-auto h-16 w-16 rounded-full"
-              />
-              <div className="mt-4 text-base font-semibold text-gray-900">
-                {testimonial.name}
-              </div>
-              <div className="text-sm text-gray-600">{testimonial.role}</div>
+            {/* Name at the Bottom */}
+            <figcaption className="mt-6 text-base font-semibold text-green-600">
+              {testimonial.name}
             </figcaption>
           </div>
         ))}

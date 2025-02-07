@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const SolutionStep = () => {
   return (
@@ -16,12 +17,14 @@ const SolutionStep = () => {
       {/* Grid Section */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="p-6 bg-green-500 rounded-md text-white shadow-lg hover:bg-green-700 cursor-pointer hover:scale-105 transition-all hover:shadow-xl">
-          <img
-            src="\images\medical.png"
+          <Image
+            src="/images/medical.png"
+            width={64} // Set width explicitly
+            height={64} // Set height explicitly
             className="w-16 rounded-full shadow-md mb-3"
             alt="Medical"
           />
-          <h1 className="font-semibold py-2 text-2xl">Check Doctor Profile</h1>
+          ;<h1 className="font-semibold py-2 text-2xl">Check Doctor Profile</h1>
           <p className="py-3">
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
             lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
@@ -29,12 +32,14 @@ const SolutionStep = () => {
           </p>
         </div>
         <div className="p-6 bg-green-500 rounded-md text-white shadow-lg hover:bg-green-700 cursor-pointer hover:scale-105 transition-all hover:shadow-xl">
-          <img
-            src="\images\medical.png"
+          <Image
+            src="/images/medical.png"
+            width={64} // Set width explicitly
+            height={64} // Set height explicitly
             className="w-16 rounded-full shadow-md mb-3"
             alt="Medical"
           />
-          <h1 className="font-semibold py-2 text-2xl">Check Doctor Profile</h1>
+          ;<h1 className="font-semibold py-2 text-2xl">Check Doctor Profile</h1>
           <p className="py-3">
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
             lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
@@ -42,12 +47,14 @@ const SolutionStep = () => {
           </p>
         </div>
         <div className="p-6 bg-green-500 rounded-md text-white shadow-lg hover:bg-green-700 cursor-pointer hover:scale-105 transition-all hover:shadow-xl">
-          <img
-            src="\images\medical.png"
+          <Image
+            src="/images/medical.png"
+            width={64} // Set width explicitly
+            height={64} // Set height explicitly
             className="w-16 rounded-full shadow-md mb-3"
             alt="Medical"
           />
-          <h1 className="font-semibold py-2 text-2xl">Check Doctor Profile</h1>
+          ;<h1 className="font-semibold py-2 text-2xl">Check Doctor Profile</h1>
           <p className="py-3">
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
             lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
@@ -55,12 +62,14 @@ const SolutionStep = () => {
           </p>
         </div>
         <div className="p-6 bg-green-500 rounded-md text-white shadow-lg hover:bg-green-700 cursor-pointer hover:scale-105 transition-all hover:shadow-xl">
-          <img
-            src="\images\medical.png"
+          <Image
+            src="/images/medical.png"
+            width={64} // Set width explicitly
+            height={64} // Set height explicitly
             className="w-16 rounded-full shadow-md mb-3"
             alt="Medical"
           />
-          <h1 className="font-semibold py-2 text-2xl">Check Doctor Profile</h1>
+          ;<h1 className="font-semibold py-2 text-2xl">Check Doctor Profile</h1>
           <p className="py-3">
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
             lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat

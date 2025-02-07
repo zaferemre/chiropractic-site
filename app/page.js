@@ -1,5 +1,4 @@
-"use client";
-
+// REMOVE "use client"; unless required
 import Header from "./components/Header";
 import Banner from "./components/Home/Banner";
 import SolutionStep from "./components/SolutionStep";
@@ -7,6 +6,7 @@ import Testimonials from "./components/Testimonials";
 import BackgroundWrapper from "./components/BackgroundWrapper";
 import Footer from "./components/Footer";
 import CompLogos from "./components/CompLogos";
+import TeamSection from "./components/TeamSection";
 
 export default function Home() {
   return (
@@ -16,9 +16,9 @@ export default function Home() {
         <Banner />
         <CompLogos />
         <Testimonials />
-        <SolutionStep />
+        <TeamSection />
         <Footer />
-      </div>{" "}
+      </div>
     </BackgroundWrapper>
   );
 }
