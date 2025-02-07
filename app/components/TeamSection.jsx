@@ -4,7 +4,7 @@ const TeamSection = () => {
   const teamMembers = [
     {
       name: "Ahmet Burak Bayır",
-      title: "Kayropraktik Uzmanı",
+      title: "Uzman Fizyoterapist ve Kayropraktik Uzmanı",
       description:
         "Ahmet Burak Bayır, omurga sağlığı alanında uzmanlaşmış bir kayropraktik uzmanıdır ve hastalarına en iyi tedaviyi sunmayı hedefler.",
       image: "/images/Chiro3.jpeg",

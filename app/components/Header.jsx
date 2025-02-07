@@ -8,10 +8,16 @@ export default function Header() {
         aria-label="Global"
         className="container mx-auto flex items-center justify-between px-4 py-4 lg:px-8"
       >
-        {/* Logo Centered */}
-        <div className="absolute left-1/2 transform -translate-x-1/2">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Chiropractic Kadıköy</span>
+        {/* Desktop Logo Text (ChiroCare) */}
+        <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2">
+          <a href="/" className="text-2xl font-bold text-green-700">
+            ChiroCare
+          </a>
+        </div>
+
+        {/* Mobile Logo Image */}
+        <div className="lg:hidden absolute left-1/2 transform -translate-x-1/2">
+          <a href="/" className="-m-1.5 p-1.5">
             <img
               alt="Chiropractic Kadıköy"
               src="/images/logo.png"

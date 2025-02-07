@@ -13,10 +13,10 @@ const conditions = [
 
 const CompLogos = () => {
   return (
-    <div className="bg-green-500 py-24 sm:py-32 mx-4">
+    <div className="bg-green-700 py-24 sm:py-32 mx-4">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-3xl font-bold text-white mb-10">
-          KAYROPRAKTİK KİMLERE UYGULANIR?
+          KAYROPRAKTİK HANGİ DURUMLARDA UYGULANIR?
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center">
           {conditions.map((condition, index) => (

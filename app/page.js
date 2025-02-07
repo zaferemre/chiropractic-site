@@ -1,4 +1,5 @@
 // REMOVE "use client"; unless required
+
 import Header from "./components/Header";
 import Banner from "./components/Home/Banner";
 import SolutionStep from "./components/SolutionStep";
