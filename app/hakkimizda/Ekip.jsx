@@ -3,6 +3,27 @@ import Image from "next/image";
 const Ekip = () => {
   const teamMembers = [
     {
+      name: "Ahmet Burak Bayır",
+      title: "Kayropraktik Uzmanı",
+      description: `
+        Lisans eğitimini İzmir Demokrasi Üniversitesi’nin Fizyoterapi ve Rehabilitasyon bölümünden mezun olarak tamamladı. Lisans sürecinin bir dönemini Uniwersytet Kaliskim Prezydenta Stanisława Wojciechowskiego’da tamamladı. Lisans boyunca 7 farklı hastanede intörn fizyoterapist olarak çalıştı ve omurga mobilizasyonu-manipülasyonu, ortopedik manuel terapi alanlarında eğitimler aldı.
+
+        Mezuniyet sonrası özel bir klinikte Kas-İskelet Ağrıları ve Spor Sakatlanmaları üzerine çalışarak manuel terapi, ortopedik rehabilitasyon, koruyucu rehabilitasyon, kişiye özel egzersiz programı hazırlanması, medikal masaj ve EMS training alanlarında hizmet verdi.
+
+        Daha sonra Maltepe Üniversitesi Tıp Fakültesi Hastaneleri'nde fizyoterapist olarak görev alarak ortopedik rehabilitasyon, nörolojik rehabilitasyon, evde fizik tedavi ve kayropraktik alanlarında çalıştı. Şu anda Chiro Care Fizyoterapi Danışmanlık Merkezi'nde hizmet vermektedir.
+      `,
+      image: "/images/AhmetYeni.jpg",
+      reverse: true,
+      certifications: [
+        "Omurga Mobilizasyonu ve Manipülasyonu Eğitimi",
+        "Ortopedik Manuel Terapi Eğitimi",
+        "Kas-İskelet Ağrıları ve Spor Sakatlanmaları Rehabilitasyonu",
+        "EMS Training Uzmanlık Sertifikası",
+        "Nörolojik Rehabilitasyon Eğitimi",
+        "Postür (Duruş) Bozuklukları ve Omurga Sağlığı Uzmanlığı",
+      ],
+    },
+    {
       name: "Mukaddes Eda Gültekin",
       title: "Fizyoterapist & Pilates Eğitmeni",
       description: `
@@ -12,7 +33,7 @@ const Ekip = () => {
 
         Güncel olarak Chiro Care Fizyoterapi ve Danışmanlık Merkezi'nde danışanlarına hizmet vermektedir.
       `,
-      image: "/images/Eda1.jpeg",
+      image: "/images/EdaYeni.jpg",
       reverse: false,
       certifications: [
         "Kadın sağlığı ve pelvik taban eğitimi (Fzt. Fatma Topbaş)",
@@ -23,27 +44,6 @@ const Ekip = () => {
         "Hamile Yogası Eğitimi (Haliç Üniversitesi)",
         "Hamile Masajı Eğitimi (Haliç Üniversitesi)",
         "Hamak Yogası & Aerial Yoga Eğitmenlik Eğitimi (Gayatri Ji - Yoga Alliance Sertifikası)",
-      ],
-    },
-    {
-      name: "Ahmet Burak Bayır",
-      title: "Kayropraktik Uzmanı",
-      description: `
-        Lisans eğitimini İzmir Demokrasi Üniversitesi’nin Fizyoterapi ve Rehabilitasyon bölümünden mezun olarak tamamladı. Lisans sürecinin bir dönemini Uniwersytet Kaliskim Prezydenta Stanisława Wojciechowskiego’da tamamladı. Lisans boyunca 7 farklı hastanede intörn fizyoterapist olarak çalıştı ve omurga mobilizasyonu-manipülasyonu, ortopedik manuel terapi alanlarında eğitimler aldı.
-
-        Mezuniyet sonrası özel bir klinikte Kas-İskelet Ağrıları ve Spor Sakatlanmaları üzerine çalışarak manuel terapi, ortopedik rehabilitasyon, koruyucu rehabilitasyon, kişiye özel egzersiz programı hazırlanması, medikal masaj ve EMS training alanlarında hizmet verdi.
-
-        Daha sonra Maltepe Üniversitesi Tıp Fakültesi Hastaneleri'nde fizyoterapist olarak görev alarak ortopedik rehabilitasyon, nörolojik rehabilitasyon, evde fizik tedavi ve kayropraktik alanlarında çalıştı. Şu anda Chiro Care Fizyoterapi Danışmanlık Merkezi'nde hizmet vermektedir.
-      `,
-      image: "/images/Chiro3.jpeg",
-      reverse: true,
-      certifications: [
-        "Omurga Mobilizasyonu ve Manipülasyonu Eğitimi",
-        "Ortopedik Manuel Terapi Eğitimi",
-        "Kas-İskelet Ağrıları ve Spor Sakatlanmaları Rehabilitasyonu",
-        "EMS Training Uzmanlık Sertifikası",
-        "Nörolojik Rehabilitasyon Eğitimi",
-        "Postür (Duruş) Bozuklukları ve Omurga Sağlığı Uzmanlığı",
       ],
     },
   ];

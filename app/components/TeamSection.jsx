@@ -7,14 +7,14 @@ const TeamSection = () => {
       title: "Uzman Fizyoterapist ve Kayropraktik Uzmanı",
       description:
         "Ahmet Burak Bayır, omurga sağlığı alanında uzmanlaşmış bir kayropraktik uzmanıdır ve hastalarına en iyi tedaviyi sunmayı hedefler.",
-      image: "/images/Chiro3.jpeg",
+      image: "/images/AhmetYeni.jpg",
     },
     {
       name: "Eda Gültekin",
       title: "Fizyoterapist & Pilates Eğitmeni",
       description:
         "Eda Gültekin, fizyoterapi ve pilates alanında uzmanlaşmış olup, hareket özgürlüğünüzü yeniden kazanmanıza yardımcı olur.",
-      image: "/images/Eda1.jpeg",
+      image: "/images/EdaYeni.jpg",
     },
   ];
 
