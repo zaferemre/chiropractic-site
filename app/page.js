@@ -2,6 +2,7 @@
 
 import Header from "./components/Header";
 import Banner from "./components/Home/Banner";
+import Hero from "./components/Home/Hero";
 import SolutionStep from "./components/SolutionStep";
 import Testimonials from "./components/Testimonials";
 import BackgroundWrapper from "./components/BackgroundWrapper";
@@ -12,9 +13,10 @@ import TeamSection from "./components/TeamSection";
 export default function Home() {
   return (
     <BackgroundWrapper>
-      <Header />
-      <div className="mx-auto lg:px-8">
+      <div className="mx-auto lg:px-40">
+        <Header />
         <Banner />
+        <Hero />
         <CompLogos />
         <Testimonials />
         <TeamSection />

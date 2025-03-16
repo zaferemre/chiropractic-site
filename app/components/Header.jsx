@@ -1,100 +1,110 @@
 "use client";
-import { FaInstagram, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
-import Link from "next/link";
-import Image from "next/image";
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { FaInstagram, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-white shadow-md">
-      <nav
-        aria-label="Global"
-        className="container mx-auto flex items-center justify-between px-4 py-4 lg:px-8"
-      >
-        {/* Logo Text for Desktop */}
-        <Link
-          href="/"
-          className="hidden lg:block text-2xl font-bold text-green-700 absolute left-1/2 transform -translate-x-1/2"
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all ${
+        isScrolled ? "bg-white shadow-md" : "bg-transparent"
+      }`}
+    >
+      <div className="flex items-center justify-between px-8 py-4 max-w-screen-xl mx-auto">
+        {/* Left: Logo */}
+        <h1 className="text-2xl font-bold text-black">ChiroCare</h1>
+
+        {/* Desktop Navigation - Centered */}
+        <nav className="hidden md:flex space-x-6 absolute left-1/2 transform -translate-x-1/2">
+          <a href="#" className="text-green-600 font-medium">
+            Ana Sayfa
+          </a>
+          <a
+            href="/hakkimizda"
+            className="text-gray-500 hover:text-black transition"
+          >
+            Hakkımızda
+          </a>
+          <a href="#" className="text-gray-500 hover:text-black transition">
+            ChiroBlog
+          </a>
+        </nav>
+
+        {/* Right: Mobile Menu Button */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden text-gray-600 hover:text-black transition"
         >
-          ChiroCare
-        </Link>
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
 
-        {/* Logo Image for Mobile */}
-        <Link href="/" className="-m-1.5 p-1.5 lg:hidden">
-          <Image
-            alt="Chiropractic Kadıköy"
-            src="/images/logo.png"
-            className="h-11 w-auto"
-            width={44}
-            height={44}
-          />
-        </Link>
-
-        {/* Desktop Icons - All on the Right */}
-        <div className="hidden lg:flex items-center space-x-6 ml-auto">
+        {/* Desktop Button (Next to Menu) */}
+        <div className="hidden md:flex">
           <a
-            href="https://www.instagram.com/chirocare.kadikoy"
+            href="https://api.whatsapp.com/send/?phone=905464213365&text&type=phone_number&app_absent=0&wame_ctl=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-green-700 hover:text-green-500"
-            aria-label="Instagram"
+            className="bg-[#acf48c] text-black font-medium px-4 py-2 rounded-full shadow-sm hover:shadow-md transition"
           >
-            <FaInstagram size={30} />
-          </a>
-
-          <a
-            href="https://maps.app.goo.gl/QPVLSz9qFz84aYZeA?g_st=iw"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-green-700 hover:text-green-500"
-            aria-label="Location"
-          >
-            <FaMapMarkerAlt size={30} />
-          </a>
-
-          <a
-            href="tel:05464213365"
-            className="text-green-700 hover:text-green-500"
-            aria-label="Phone"
-          >
-            <FaPhone size={30} />
+            Bize Yazın
           </a>
         </div>
+      </div>
 
-        {/* Mobile View - Phone Left, Instagram & Location Right */}
-        <div className="flex w-full items-center justify-between lg:hidden">
-          {/* Phone Icon on Left */}
+      {/* Mobile Dropdown Menu */}
+      {menuOpen && (
+        <div className="absolute top-16 right-4 w-48 bg-white shadow-lg rounded-lg p-4 flex flex-col space-y-4 md:hidden">
+          <a href="#" className="text-gray-700 hover:text-black transition">
+            Ana Sayfa
+          </a>
           <a
-            href="tel:05464213365"
-            className="ml-4 text-green-700 hover:text-green-500"
-            aria-label="Phone"
+            href="/hakkimizda"
+            className="text-gray-700 hover:text-black transition"
           >
-            <FaPhone size={30} />
+            Hakkımızda
+          </a>
+          <a href="#" className="text-gray-700 hover:text-black transition">
+            ChiroBlog
           </a>
 
-          {/* Instagram & Location on Right */}
-          <div className="flex space-x-6 mr-4">
-            <a
-              href="https://www.instagram.com/chirocare.kadikoy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-700 hover:text-green-500"
-              aria-label="Instagram"
-            >
-              <FaInstagram size={30} />
-            </a>
-
-            <a
-              href="https://maps.app.goo.gl/QPVLSz9qFz84aYZeA?g_st=iw"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-700 hover:text-green-500"
-              aria-label="Location"
-            >
-              <FaMapMarkerAlt size={30} />
-            </a>
+          {/* Social Media Icons (Bottom of Dropdown) */}
+          <div className="flex justify-center space-x-3 mt-4">
+            {[
+              {
+                icon: <FaMapMarkerAlt />,
+                link: "https://maps.app.goo.gl/QPVLSz9qFz84aYZeA?g_st=iw",
+              },
+              {
+                icon: <FaInstagram />,
+                link: "https://www.instagram.com/chirocare.kadikoy/#",
+              },
+              { icon: <FaPhone />, link: "tel:05464213365" },
+            ].map((item, index) => (
+              <a
+                key={index}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center bg-[#acf48c] text-black rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-105"
+              >
+                {item.icon}
+              </a>
+            ))}
           </div>
         </div>
-      </nav>
+      )}
     </header>
   );
 }

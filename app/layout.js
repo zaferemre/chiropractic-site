@@ -10,13 +10,22 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/images/logo.png" />
+        {/* Favicon (Make sure logo.png is in /public/images) */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
-          rel="stylesheet"
+          rel="icon"
+          href="/images/logo.png"
+          type="image/png"
+          sizes="32x32"
         />
+
+        {/* Metadata for SEO */}
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
       </head>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

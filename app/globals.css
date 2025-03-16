@@ -1,41 +1,46 @@
+/* Tailwind's base styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Import Montserrat from Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+/* Custom font-face definitions for TT Firs Neue */
+@font-face {
+  font-family: "TT Firs Neue";
+  src: url("/tt_firs_neue/TT Firs Neue Trial Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: "TT Firs Neue";
+  src: url("/tt_firs_neue/TT Firs Neue Trial Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Root color variables */
 :root {
-  --background: #82cfc2;
+  --background: #ffffff;
   --foreground: #171717;
 }
 
-/* Dark mode styling */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
 
-/* Apply global font family */
+/* Global body styling */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Montserrat", sans-serif; /* Montserrat font is applied globally */
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+  font-family: "TT Firs Neue", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-.hide-scrollbar {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-}
-.hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+/* Tailwind’s base layer to apply TT Firs Neue font globally */
+@layer base {
+  body {
+    @apply font-tt-neu; /* Apply TT Firs Neue font globally */
+  }
 }
