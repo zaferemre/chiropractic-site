@@ -9,6 +9,7 @@ import BackgroundWrapper from "./components/BackgroundWrapper";
 import Footer from "./components/Footer";
 import CompLogos from "./components/CompLogos";
 import TeamSection from "./components/TeamSection";
+import BlogPreview from "./components/BlogPreview";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <CompLogos />
         <Testimonials />
+        <BlogPreview />
         <TeamSection />
         <Footer />
       </div>

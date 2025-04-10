@@ -30,7 +30,7 @@ export default function Hero() {
           },
           {
             type: "image",
-            src: "/images/Chiro3.jpeg",
+            src: "/images/AhmetYeni.jpg",
             offset: "translate-y-6",
             mobileShow: false,
           },

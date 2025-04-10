@@ -15,7 +15,7 @@ export default function Banner() {
       {/* Heading */}
       <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl  max-w-3xl">
         Vücudunuzun doğal dengesini
-        <span className="text-green-600"> yeniden</span> keşfedelim.
+        <span className="text-[#acf48c]"> yeniden</span> keşfedelim.
       </h1>
 
       {/* Subtext */}

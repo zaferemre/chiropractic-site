@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { FaInstagram, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,23 +24,28 @@ export default function Header() {
       }`}
     >
       <div className="flex items-center justify-between px-8 py-4 max-w-screen-xl mx-auto">
-        {/* Left: Logo */}
-        <h1 className="text-2xl font-bold text-black">ChiroCare</h1>
+        {/* Left: Logo (Links to Home) */}
+        <Link href="/" className="">
+          <h1 className="text-2xl font-bold text-black">ChiroCare</h1>
+        </Link>
 
         {/* Desktop Navigation - Centered */}
         <nav className="hidden md:flex space-x-6 absolute left-1/2 transform -translate-x-1/2">
-          <a href="#" className="text-green-600 font-medium">
+          <Link href="/" className="text-green-600 font-medium">
             Ana Sayfa
-          </a>
-          <a
+          </Link>
+          <Link
             href="/hakkimizda"
             className="text-gray-500 hover:text-black transition"
           >
             Hakkımızda
-          </a>
-          <a href="#" className="text-gray-500 hover:text-black transition">
+          </Link>
+          <Link
+            href="/chiroblog"
+            className="text-gray-500 hover:text-black transition"
+          >
             ChiroBlog
-          </a>
+          </Link>
         </nav>
 
         {/* Right: Mobile Menu Button */}
@@ -66,18 +72,21 @@ export default function Header() {
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="absolute top-16 right-4 w-48 bg-white shadow-lg rounded-lg p-4 flex flex-col space-y-4 md:hidden">
-          <a href="#" className="text-gray-700 hover:text-black transition">
+          <Link href="/" className="text-gray-700 hover:text-black transition">
             Ana Sayfa
-          </a>
+          </Link>
           <a
             href="/hakkimizda"
             className="text-gray-700 hover:text-black transition"
           >
             Hakkımızda
           </a>
-          <a href="#" className="text-gray-700 hover:text-black transition">
+          <Link
+            href="/chiroblog"
+            className="text-gray-700 hover:text-black transition"
+          >
             ChiroBlog
-          </a>
+          </Link>
 
           {/* Social Media Icons (Bottom of Dropdown) */}
           <div className="flex justify-center space-x-3 mt-4">

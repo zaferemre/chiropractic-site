@@ -26,7 +26,7 @@ export default function Footer() {
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-8 h-8 flex items-center justify-center bg-[#acf48c] text-black rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-105"
+          className="w-8 h-8 flex items-center justify-center bg-[#acf48c] text-green-600 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-105"
         >
           {item.icon}
         </a>
