@@ -3,6 +3,10 @@ import Footer from "../components/Footer";
 import { client } from "../../sanity/lib/client";
 import ChiroBlog from "./chiroBlog";
 import BackgroundWrapper from "../components/BackgroundWrapper";
+
+// 🔧 Force dynamic rendering to always get latest posts
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   let posts = [];
 
@@ -32,10 +36,7 @@ export default async function Home() {
   return (
     <BackgroundWrapper>
       <div className="min-h-screen text-black relative pt-16">
-        {/* Header */}
         <Header />
-
-        {/* Ensure MDBlog receives posts correctly */}
         {posts.length > 0 ? (
           <ChiroBlog posts={posts} />
         ) : (
@@ -43,8 +44,6 @@ export default async function Home() {
             No blog posts available.
           </p>
         )}
-
-        {/* Footer */}
         <Footer />
       </div>
     </BackgroundWrapper>

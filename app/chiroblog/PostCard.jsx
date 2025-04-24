@@ -15,7 +15,7 @@ export default function PostCard({ post }) {
         <div className="relative h-48 w-full">
           {post.mainImage?.asset?.url ? (
             <Image
-              src={post.mainImage.asset.url}
+              src={post.mainImage.asset.url || "/images/logoBig.webp"}
               alt={post.title || "Post image"}
               layout="fill"
               objectFit="cover"

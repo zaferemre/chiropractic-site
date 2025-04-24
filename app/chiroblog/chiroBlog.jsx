@@ -1,37 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Card, CardContent } from "../components/ui/Card";
-import { client } from "../../sanity/lib/client";
 
-export default async function ChiroBlog() {
-  let posts = [];
-
-  try {
-    posts = await client.fetch(`
-      *[_type == "post"] | order(publishedAt desc){
-        _id,
-        title,
-        slug,
-        description,
-        mainImage{
-          asset->{url}
-        },
-        author->{
-          name,
-          image{
-            asset->{url}
-          }
-        },
-        categories[]->{
-          title
-        },
-        publishedAt
-      }
-    `);
-  } catch (error) {
-    console.error("Error fetching posts:", error);
-  }
-
+export default function ChiroBlog({ posts }) {
   const categories = Array.from(
     new Set(
       posts.flatMap((post) => post.categories?.map((cat) => cat.title) || []),
@@ -81,7 +54,7 @@ export default async function ChiroBlog() {
 
             return (
               <Card
-                key={postSlug}
+                key={post._id}
                 className="relative overflow-hidden transition-transform duration-300 hover:scale-105 rounded-lg h-[400px]"
               >
                 <Link
@@ -102,7 +75,7 @@ export default async function ChiroBlog() {
                   ) : (
                     <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-500">
                       <Image
-                        src={"/logoBig.webp"}
+                        src={"/images/logoBIG.png"}
                         alt="Post image"
                         fill
                         objectFit="cover"
