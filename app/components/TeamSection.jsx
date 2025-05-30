@@ -9,13 +9,6 @@ const TeamSection = () => {
         "Ahmet Burak Bayır, omurga sağlığı alanında uzmanlaşmış bir kayropraktik uzmanıdır ve hastalarına en iyi tedaviyi sunmayı hedefler.",
       image: "/images/AhmetYeni.jpg",
     },
-    {
-      name: "Eda Gültekin",
-      title: "Fizyoterapist & Pilates Eğitmeni",
-      description:
-        "Eda Gültekin, fizyoterapi ve pilates alanında uzmanlaşmış olup, hareket özgürlüğünüzü yeniden kazanmanıza yardımcı olur.",
-      image: "/images/EdaYeni.jpg",
-    },
   ];
 
   return (
@@ -30,7 +23,7 @@ const TeamSection = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+        <div className="grid gap-8 mb-6 lg:mb-16 ">
           {teamMembers.map((member, index) => (
             <div
               key={index}

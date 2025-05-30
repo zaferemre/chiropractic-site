@@ -23,29 +23,6 @@ const Ekip = () => {
         "Postür (Duruş) Bozuklukları ve Omurga Sağlığı Uzmanlığı",
       ],
     },
-    {
-      name: "Mukaddes Eda Gültekin",
-      title: "Fizyoterapist & Pilates Eğitmeni",
-      description: `
-        Lisans eğitimini İstanbul Marmara Üniversitesi sağlık bilimleri fakültesi fizyoterapi ve rehabilitasyon bölümünde tamamladı. Lisans dönemi boyunca 8 farklı hastanede nörolojik rehabilitasyon, pediatrik rehabilitasyon ve ortopedik rehabilitasyon alanlarında intern fizyoterapist olarak hizmet verdi.
-
-        Mezun olduktan sonra ilgi alanları doğrultusunda beden sağlığını ve farkındalığını korumaya, geliştirmeye yönelik eğitimlere katıldı. İstanbul Anadolu yakasında çeşitli pilates stüdyolarında hem sağlıklı danışanlarla hem de omurga ve kas & iskelet sistemi problemlerine sahip danışanlarla birlikte çalıştı.
-
-        Güncel olarak Chiro Care Fizyoterapi ve Danışmanlık Merkezi'nde danışanlarına hizmet vermektedir.
-      `,
-      image: "/images/EdaYeni.jpg",
-      reverse: false,
-      certifications: [
-        "Kadın sağlığı ve pelvik taban eğitimi (Fzt. Fatma Topbaş)",
-        "Manuel terapi eğitimi (Fzt. Osman Şahin)",
-        "Kinezyolojik bantlama eğitimi (Fzt. Osman Şahin)",
-        "Mat1 ve Reformer1 Pilates Eğitimi (Deniz Demirasal)",
-        "1. Kademe Pilates Yardımcı Eğitmen Eğitimi (Türkiye Cimnastik Federasyonu)",
-        "Hamile Yogası Eğitimi (Haliç Üniversitesi)",
-        "Hamile Masajı Eğitimi (Haliç Üniversitesi)",
-        "Hamak Yogası & Aerial Yoga Eğitmenlik Eğitimi (Gayatri Ji - Yoga Alliance Sertifikası)",
-      ],
-    },
   ];
 
   return (
