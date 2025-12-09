@@ -1,6 +1,5 @@
 import "./globals.css";
 import Header from "./components/Header";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   title: "ChiroCare",
@@ -37,8 +36,6 @@ export default function RootLayout({ children }) {
 
         <Header />
         {children}
-
-        <SpeedInsights />
       </body>
     </html>
   );
