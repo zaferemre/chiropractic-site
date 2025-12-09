@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Banner() {
   return (
@@ -8,9 +9,11 @@ export default function Banner() {
     >
       {/* Background Logo */}
       <div className="absolute -left-80 lg:-left-80 w-[600px] md:w-[400px] lg:w-[700px] opacity-20 z-[-1] blur-sm mix-blend-soft-light">
-        <img
+        <Image
           src="/images/logoBIG.png"
           alt="ChiroCare Kadıköy Kayropraktik Logo"
+          width={700}
+          height={700}
           className="w-full"
         />
       </div>

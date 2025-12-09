@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section
@@ -53,10 +55,11 @@ export default function Hero() {
               className={`relative mx-1 w-44 md:w-56 lg:w-64 h-[400px] md:h-[500px] lg:h-[550px] rounded-[40px] overflow-hidden shadow-lg ${item.offset}`}
             >
               {item.type === "image" ? (
-                <img
+                <Image
                   src={item.src}
                   alt={item.alt}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                   loading="lazy"
                 />
               ) : (
@@ -83,20 +86,26 @@ export default function Hero() {
         className="absolute bottom-5 left-5 md:bottom-10 md:left-10 bg-white w-44 h-44 p-4 rounded-xl shadow-lg flex flex-col justify-center items-center text-center"
       >
         <div className="flex -space-x-2 mb-3" aria-hidden="true">
-          <img
+          <Image
             className="w-12 h-12 rounded-full border-2 border-white"
             src="https://doodleipsum.com/700x700/avatar-2?i=09d1ff61311e1f04032402ba8caead83"
             alt="Hasta profil 1"
+            width={48}
+            height={48}
           />
-          <img
+          <Image
             className="w-12 h-12 rounded-full border-2 border-white"
             src="https://doodleipsum.com/700x700/avatar-2?i=8326df1d1d0d9f677520409402db45c8"
             alt="Hasta profil 2"
+            width={48}
+            height={48}
           />
-          <img
+          <Image
             className="w-12 h-12 rounded-full border-2 border-white"
             src="https://doodleipsum.com/700x700/avatar-2?i=bf8b97258fa53643f64755c68b08041b"
             alt="Hasta profil 3"
+            width={48}
+            height={48}
           />
         </div>
 
