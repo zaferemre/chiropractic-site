@@ -6,6 +6,28 @@ export default async function BlogPreview() {
   let blogs = [];
 
   try {
+    if (!client) {
+      console.warn("⚠️ BlogPreview: Sanity client not configured. Missing NEXT_PUBLIC_SANITY_PROJECT_ID");
+      return (
+        <section className="py-16 md:py-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#acf48c]/5 to-transparent -z-10"></div>
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                Bloglarımıza <span className="text-[#acf48c]">Göz Atın</span>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-[#acf48c] to-[#6EE7B7] mx-auto rounded-full mb-4"></div>
+            </div>
+            <div className="text-center py-12">
+              <p className="text-gray-500 text-lg">
+                Blog yazıları yakında eklenecektir.
+              </p>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
     blogs = await client.fetch(`
       *[_type == "post"] | order(publishedAt desc)[0...3]{
         _id,
