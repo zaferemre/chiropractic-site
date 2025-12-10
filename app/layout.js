@@ -1,5 +1,6 @@
 import "./globals.css";
 import Header from "./components/Header";
+import FloatingButtons from "./components/FloatingButtons";
 import Script from "next/script";
 
 export const metadata = {
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
 
         <Header />
         {children}
+        <FloatingButtons />
       </body>
     </html>
   );

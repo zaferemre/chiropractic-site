@@ -15,24 +15,21 @@ const BackgroundWrapper = ({ children }) => {
 
   return (
     <div className="relative isolate overflow-hidden min-h-screen bg-white">
-      {/* Premium Full-Page Background Gradient */}
+      {/* Full-Page Background Gradient */}
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-10 h-full w-full transform-gpu blur-3xl"
       >
-        {/* Animated Gradient Layer 1 */}
+        {/* Gradient Layer 1 */}
         <div
           style={{ clipPath: clipPath1 }}
-          className="absolute top-0 left-0 h-full w-full bg-gradient-to-tr from-[#6EE7B7] to-[#34D399] opacity-5"
+          className="absolute top-0 left-0 h-full w-full bg-gradient-to-tr from-[#6EE7B7] to-[#34D399] opacity-30"
         />
-        {/* Animated Gradient Layer 2 */}
+        {/* Gradient Layer 2 */}
         <div
           style={{ clipPath: clipPath2 }}
-          className="absolute top-0 left-0 h-full w-full bg-gradient-to-bl from-[#D1FAE5] to-[#A7F3D0] opacity-5"
+          className="absolute top-0 left-0 h-full w-full bg-gradient-to-bl from-[#D1FAE5] to-[#A7F3D0] opacity-20"
         />
-        {/* Additional Subtle Gradient Layer */}
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#acf48c] opacity-[0.03] rounded-full blur-3xl"></div>
-        <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#6EE7B7] opacity-[0.03] rounded-full blur-3xl"></div>
       </div>
 
       {/* Children (Page Content) */}
