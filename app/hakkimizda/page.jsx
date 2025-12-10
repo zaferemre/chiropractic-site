@@ -74,7 +74,7 @@ export default function Hakkimizda() {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Vizyonumuz</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Türkiye'nin önde gelen kayropraktik ve fizyoterapi merkezi
+                    {`Türkiye'nin`} önde gelen kayropraktik ve fizyoterapi merkezi
                     olmak, modern tedavi yöntemleriyle toplum sağlığına katkıda
                     bulunmak.
                   </p>

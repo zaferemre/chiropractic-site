@@ -41,7 +41,7 @@ export default function AtasehirFizyoterapi() {
         <Banner 
           title={
             <>
-              Ataşehir'de{" "}
+              {`Ataşehir'de`}{" "}
               <span className="relative inline-block">
                 <span className="text-[#acf48c] relative z-10">Fizyoterapi</span>
                 <span className="absolute bottom-0 left-0 w-full h-3 bg-[#acf48c] opacity-30 -z-0 transform -skew-x-12"></span>
