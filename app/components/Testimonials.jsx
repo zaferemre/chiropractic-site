@@ -103,7 +103,7 @@ const Testimonials = ({ variant = "carousel" }) => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#acf48c] to-[#6EE7B7] mx-auto rounded-full"></div>
           <p className="text-gray-600 mt-4 text-lg">
-            Binlerce mutlu hastamızın deneyimleri
+            Yüzlerce mutlu hastamızın deneyimlerinden
           </p>
         </div>
 
@@ -217,7 +217,7 @@ const Testimonials = ({ variant = "carousel" }) => {
         </h2>
         <div className="w-24 h-1 bg-gradient-to-r from-[#acf48c] to-[#6EE7B7] mx-auto rounded-full"></div>
         <p className="text-gray-600 mt-4 text-lg">
-          Binlerce mutlu hastamızın deneyimleri
+          Yüzlerce mutlu hastamızın deneyimlerinden
         </p>
       </div>
 

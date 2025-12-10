@@ -6,12 +6,11 @@ import PropTypes from "prop-types"; // Import PropTypes for validation
 import { notFound } from "next/navigation"; // Handle not found pages
 import BackgroundWrapper from "@/app/components/BackgroundWrapper";
 
-export const revalidate = 60; // Enable revalidation every 60 seconds
-
 // Generate static params for all posts
+// Required for output: export - must always return a valid array
 export async function generateStaticParams() {
+  // Early return if client is not configured
   if (!client) {
-    console.warn("Sanity client not configured, returning empty array");
     return [];
   }
   
@@ -26,7 +25,8 @@ export async function generateStaticParams() {
         slug: post.slug,
       }));
   } catch (error) {
-    console.error("Error generating static params:", error);
+    // Return empty array on error to allow static export
+    // This prevents build failures when Sanity is not configured
     return [];
   }
 }
