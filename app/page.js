@@ -40,7 +40,7 @@ export default function Home() {
         <Banner />
         <Hero />
         <CompLogos />
-        <Testimonials />
+        <Testimonials variant="grid" />
         <BlogPreview />
         <TeamSection />
         <Footer />
