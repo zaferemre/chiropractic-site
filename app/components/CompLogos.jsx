@@ -45,7 +45,7 @@ const CompLogos = () => {
           {conditions.map((condition, index) => (
             <li
               key={index}
-              className={`group relative p-5 md:p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl text-gray-900 font-semibold text-sm md:text-base transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 border border-gray-100 hover:border-[#acf48c]/50 overflow-hidden ${
+              className={`group relative p-6 md:p-7 bg-white rounded-2xl shadow-md hover:shadow-xl text-gray-800 font-semibold text-sm md:text-base transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 border border-gray-200 hover:border-[#acf48c] overflow-hidden ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
@@ -54,17 +54,22 @@ const CompLogos = () => {
                 transitionDelay: `${index * 50}ms`,
               }}
             >
-              {/* Gradient Background on Hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#acf48c]/10 to-[#6EE7B7]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {/* Subtle Background on Hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#acf48c]/5 to-[#6EE7B7]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
-              {/* Shine Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              {/* Top Accent Line */}
+              <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#acf48c] to-[#6EE7B7] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               
-              {/* Content */}
-              <span className="relative z-10 block">{condition}</span>
-              
-              {/* Decorative Corner */}
-              <div className="absolute top-2 right-2 w-2 h-2 bg-[#acf48c] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              {/* Content with Icon Space */}
+              <div className="relative z-10 flex flex-col items-center justify-center min-h-[80px]">
+                {/* Icon Placeholder - Simple Circle */}
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-100 flex items-center justify-center mb-3 group-hover:bg-[#acf48c]/10 transition-all duration-500 group-hover:scale-110">
+                  <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-[#acf48c] opacity-40 group-hover:opacity-100 transition-all duration-500"></div>
+                </div>
+                
+                {/* Text */}
+                <span className="block leading-tight text-gray-800 group-hover:text-gray-900 transition-colors duration-300">{condition}</span>
+              </div>
             </li>
           ))}
         </ul>
