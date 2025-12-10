@@ -12,6 +12,11 @@ import config from '../../../sanity.config'
 
 export const dynamic = 'force-static'
 
+// Generate static params for catch-all route (required for output: export)
+export async function generateStaticParams() {
+  return [{ tool: [] }] // Return default route for studio
+}
+
 export { metadata, viewport } from 'next-sanity/studio'
 
 export default function StudioPage() {
