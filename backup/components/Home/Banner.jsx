@@ -41,7 +41,7 @@ export default function Banner() {
           className="bg-[#acf48c] text-black font-semibold px-6 py-3 rounded-full hover:shadow-lg transition"
           aria-label="WhatsApp ile Randevu Al"
         >
-          Randevu Alın
+          Bize Ulaşın
         </Link>
 
         {/* Secondary Link */}

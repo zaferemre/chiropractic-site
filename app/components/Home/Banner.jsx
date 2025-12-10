@@ -2,7 +2,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Banner() {
+export default function Banner({ 
+  title = "Vücudunuzun doğal dengesini yeniden keşfedelim.",
+  description = "Sağlıklı bir yaşam için omurganızın dengesini koruyun. Doğru duruş, hareket özgürlüğü ve ağrısız bir yaşam için profesyonel fizyoterapi, kayropraktik ve pilates hizmetlerimizle yanınızdayız.",
+  logoAlt = "ChiroCare Kadıköy Kayropraktik Logo"
+}) {
   return (
     <section
       className="relative flex flex-col items-center justify-center text-center px-6 lg:px-0 pt-32 pb-16 overflow-hidden"
@@ -12,7 +16,7 @@ export default function Banner() {
       <div className="absolute -left-80 lg:-left-80 w-[600px] md:w-[400px] lg:w-[700px] opacity-10 z-[-1] blur-2xl mix-blend-soft-light">
         <Image
           src="/images/logoBIG.png"
-          alt="ChiroCare Kadıköy Kayropraktik Logo"
+          alt={logoAlt}
           width={700}
           height={700}
           className="w-full"
@@ -26,19 +30,12 @@ export default function Banner() {
 
       {/* Main Heading */}
       <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-gray-900 max-w-5xl leading-tight">
-        Vücudunuzun doğal dengesini{" "}
-        <span className="relative inline-block">
-          <span className="text-[#acf48c] relative z-10">yeniden</span>
-          <span className="absolute bottom-0 left-0 w-full h-3 bg-[#acf48c] opacity-30 -z-0 transform -skew-x-12"></span>
-        </span>{" "}
-        keşfedelim.
+        {title}
       </h1>
 
       {/* Supporting Text */}
       <p className="text-gray-600 text-lg md:text-xl mt-8 max-w-2xl leading-relaxed">
-        Sağlıklı bir yaşam için omurganızın dengesini koruyun. Doğru duruş,
-        hareket özgürlüğü ve ağrısız bir yaşam için profesyonel fizyoterapi,
-        kayropraktik ve pilates hizmetlerimizle yanınızdayız.
+        {description}
       </p>
 
       {/* Action Buttons with Premium Styling */}
@@ -52,7 +49,7 @@ export default function Banner() {
           aria-label="WhatsApp ile Randevu Al"
         >
           <span className="relative z-10 flex items-center gap-2">
-            Randevu Alın
+            Bize Ulaşın
             <svg
               className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
               fill="none"
@@ -95,38 +92,8 @@ export default function Banner() {
         </Link>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden lg:block">
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </div>
 
-      <style jsx>{`
-        @keyframes blob {
-          0% {
-            transform: translate(0px, 0px) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-          100% {
-            transform: translate(0px, 0px) scale(1);
-          }
-        }
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-      `}</style>
+
     </section>
   );
 }

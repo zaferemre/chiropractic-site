@@ -20,7 +20,7 @@ export const metadata = {
     description:
       "Doğal dengenizi yeniden keşfedin. Kayropraktik ve fizyoterapi hizmetlerimizle sağlığınızı destekleyin.",
     images: ["/images/logoBIG.png"],
-    url: "https://www.chirocare.tr/",
+    url: "https://www.ahmetburakbayir.com/",
     type: "website",
   },
   robots: {
@@ -28,7 +28,7 @@ export const metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://www.chirocare.tr/",
+    canonical: "https://www.ahmetburakbayir.com/",
   },
 };
 
