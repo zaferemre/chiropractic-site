@@ -87,7 +87,7 @@ export default function Hakkimizda() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { title: "Güvenilirlik", icon: "🛡️", description: "Hastalarımıza güvenilir ve şeffaf hizmet sunuyoruz." },
-                { title: "Uzmanlık", icon: "🎓", description: "Alanında uzmanımızla hizmet veriyoruz." },
+                { title: "Uzmanlık", icon: "🎓", description: "Uzmanlığımızla profesyonel çözümler üretiyoruz." },
                 { title: "Kişiselleştirme", icon: "👤", description: "Her danışan için özel tedavi planı hazırlıyoruz." },
                 { title: "Doğallık", icon: "🌿", description: "Doğal ve etkili tedavi yöntemleri kullanıyoruz." },
               ].map((value, index) => (
