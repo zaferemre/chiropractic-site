@@ -126,7 +126,7 @@ const Testimonials = () => {
 
             {/* Quote Icon */}
             <div className="absolute top-4 left-4 text-[#acf48c] opacity-20 text-6xl font-serif">
-              "
+              {`"`}
             </div>
 
             {/* Star Rating */}
@@ -144,7 +144,7 @@ const Testimonials = () => {
 
             {/* Text Content */}
             <blockquote className="text-base md:text-lg font-medium text-gray-800 flex-grow flex items-center justify-center relative z-10 leading-relaxed">
-              <p>"{testimonial.text}"</p>
+              <p>{`"${testimonial.text}"`}</p>
             </blockquote>
 
             {/* Name and Avatar */}
