@@ -37,7 +37,7 @@
 /* Global body styling */
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: #ffffff !important;
   font-family: "TT Firs Neue", sans-serif;
   scroll-behavior: smooth;
 }

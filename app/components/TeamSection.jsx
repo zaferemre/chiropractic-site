@@ -34,11 +34,11 @@ const TeamSection = () => {
         {/* Premium Heading */}
         <div className="mx-auto max-w-screen-sm text-center mb-12 lg:mb-16">
           <h2 className="mb-4 text-4xl md:text-5xl tracking-tight font-extrabold text-gray-900">
-            <span className="text-[#acf48c]">Ekibimiz</span>
+            <span className="text-[#acf48c]">Uzmanımız</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#acf48c] to-[#6EE7B7] mx-auto rounded-full mb-6"></div>
           <p className="font-medium text-gray-700 lg:mb-16 sm:text-xl">
-            Sağlık ve iyilik halinizi ön planda tutan uzman ekibimizle tanışın.
+            Sağlık ve iyilik halinizi ön planda tutan uzmanımızla tanışın.
           </p>
         </div>
 
