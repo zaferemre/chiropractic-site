@@ -60,7 +60,7 @@ export default function Header() {
               0546 421 33 65
             </a>
             <a
-              href="https://api.whatsapp.com/send/?phone=905464213365&text&type=phone_number&app_absent=0"
+              href="https://wa.me/905464213365"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#acf48c] text-black font-medium px-4 py-2 rounded-full shadow-sm hover:shadow-md transition"

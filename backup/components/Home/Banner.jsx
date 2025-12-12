@@ -35,7 +35,7 @@ export default function Banner() {
       <div className="relative flex items-center gap-6 mt-8">
         {/* CTA Button */}
         <Link
-          href="https://api.whatsapp.com/send/?phone=905464213365&text&type=phone_number&app_absent=0&wame_ctl=1"
+          href="https://wa.me/905464213365"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#acf48c] text-black font-semibold px-6 py-3 rounded-full hover:shadow-lg transition"
